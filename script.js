@@ -6,7 +6,6 @@ const App = Vue.createApp({
     },
     methods: {
         async getImage() {
-            // console.log('Küldve.');
             this.imgSource = false;
 
             const response = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -16,6 +15,6 @@ const App = Vue.createApp({
                 this.imgSource = json.message;
             }
         }
-    }
+    },
 })
-.mount('#app')
+    .mount('#app')
