@@ -1,2 +1,7 @@
-# Simple website for get random dog image.
-https://csokihun.github.io/randomdog/
+# Simple website for get random pet image.
+
+Available animals:
+-dog
+-cat
+
+https://csokihun.github.io/randompet/
