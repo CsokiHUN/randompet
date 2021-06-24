@@ -19,7 +19,7 @@
             <button @click="getImage('cat')" class="btn btn-secondary ml-1">Give me a cat!</button>
         </div>
         <div class="image d-flex justify-content-center align-items-center">
-            <img v-if="imgSource" v-bind:src="imgSource" @load="onImageLoaded" alt="">
+            <img v-if="imgSource" v-bind:src="imgSource" @load.prevent="onImageLoaded" alt="">
 
             <div v-if="loading" class="loading">
                 <i class="fas fa-circle-notch rotating"></i>            
