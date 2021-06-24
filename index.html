@@ -10,7 +10,8 @@
 <body>
     <div id="app">
         <div class="controls">
-            <button @click="getImage">Give me a dog!</button>
+            <button @click="getImage('dog')">Give me a dog!</button>
+            <button @click="getImage('cat')">Give me a cat!</button>
         </div>
         <div class="image">
             <img v-if="imgSource" v-bind:src="imgSource" alt="">
