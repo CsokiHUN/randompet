@@ -11,7 +11,8 @@ const App = Vue.createApp({
                     arg: 'url'
                 }
             },
-            imgSource: false
+            imgSource: false,
+            loading: false,
         }
     },
     methods: {
@@ -22,6 +23,7 @@ const App = Vue.createApp({
             const typeData = this.types[typ];
 
             this.imgSource = false;
+            this.loading = true;
 
             const response = await fetch(typeData.url);
             let json = await response.json();
@@ -33,7 +35,7 @@ const App = Vue.createApp({
             if (json) {
                 this.imgSource = json[typeData.arg];
             }
-
+            this.loading = false;
         }
     },
 })
