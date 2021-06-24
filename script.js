@@ -35,6 +35,8 @@ const App = Vue.createApp({
             if (json) {
                 this.imgSource = json[typeData.arg];
             }
+        },
+        onImageLoaded() {
             this.loading = false;
         }
     },
