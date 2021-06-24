@@ -40,5 +40,11 @@ const App = Vue.createApp({
             this.loading = false;
         }
     },
+    mounted() {
+        const entries = Object.entries(this.types);
+        const randomTyp = Math.floor(Math.random() * entries.length);
+        
+        this.getImage(entries[randomTyp][0]);
+    }
 })
     .mount('#app')
